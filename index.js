@@ -9,17 +9,16 @@ function addItem() {
 
 
 function checkedItem () {
-    $('.shopping-item-toggle').on('click', function(event){
-      $(event.target).closest('li').toggleClass('shopping-item__checked');
+  $('.shopping-list').on('click','.shopping-item-toggle', function() {
+      $(event.target).closest('li').children('.shopping-item').toggleClass('shopping-item__checked');
     });
   }
   $(checkedItem);
 
 
 function deleteItem() {
-    $('.shopping-item-delete').on('click',function(event){
+    $('.shopping-list').on('click','.shopping-item-delete', function() {
       $(event.target).closest('li').remove();
     });
   }
   $(deleteItem);
-
